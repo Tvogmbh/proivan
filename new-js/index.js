@@ -1,5 +1,5 @@
 document.getElementById('footer').innerHTML = "Copyright © 2022-2023 <a href='http://pro-ivan.cn/'>pro-ivan.cn</a> Powered by<a href=''> Tvogmbh</a>.";
-document.getElementById('GG').innerHTML = "只提供网站页面显示"
+document.getElementById('GG').innerHTML = "只提供网站页面显示. 注意：这只是 <a href='pro-ivan.cn'>pro-ivan.cn</a> 的页面镜像，除页面外，均为从 <a href='pro-ivan.cn'>pro-ivan.cn</a> 服务器拉取（如：图片）,并且 <a href='pro-ivan.cn'>pro-ivan.cn</a> 如果页面更新，我将尽力更新此页面。"
 function imgs() {
     window.open('new-page1.html', '_self');
 };
