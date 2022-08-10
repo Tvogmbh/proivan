@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" />
+		<meta name="renderer" content="webkit" />
+		<meta name="force-rendering" content="webkit" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<link rel="stylesheet" href="./mdui/css/mdui.css" />
+        <link rel="stylesheet" href="./new-js/index.css">
+		<title>Pro-Ivan数字库-图床</title>
+	</head>
+	<body class="mdui-drawer-body-left mdui-theme-primary-light-blue">
+		<div class="mdui-drawer" id="left-drawer">
+			<img src="./Ivan.png" style="max-width: 100%; max-height: 100%;">
+			<ul class="mdui-list">
+                <li class="mdui-list-item mdui-ripple" onclick="home()">
+					<i class="mdui-list-item-icon mdui-icon material-icons">home</i>
+					<div class="mdui-list-item-content">主页</div>
+				</li>
+				<li class="mdui-list-item mdui-ripple" mdui-dialog="{target: '#announcement'}">
+					<i class="mdui-list-item-icon mdui-icon material-icons">message</i>
+					<div class="mdui-list-item-content">公告</div>
+				</li>
+				<li class="mdui-list-item mdui-ripple" mdui-dialog="{target: '#support'}">
+					<i class="mdui-list-item-icon mdui-icon material-icons">account_balance_wallet</i>
+					<div class="mdui-list-item-content">支持我们</div>
+				</li>
+				<li class="mdui-list-item mdui-ripple" onclick="imgs()">
+					<i class="mdui-list-item-icon mdui-icon material-icons">image</i>
+					<div class="mdui-list-item-content">图库</div>
+				</li>
+				<li class="mdui-list-item mdui-ripple" onclick="comic()">
+					<i class="mdui-list-item-icon mdui-icon material-icons">book</i>
+					<div class="mdui-list-item-content">漫画</div>
+				</li>
+				<li class="mdui-list-item mdui-ripple" onclick="img_bed()">
+					<i class="mdui-list-item-icon mdui-icon material-icons">cloud_queue</i>
+					<div class="mdui-list-item-content">图床</div>
+				</li>
+				<li class="mdui-list-item mdui-ripple" onclick="little_game()">
+					<i class="mdui-list-item-icon mdui-icon material-icons">extension</i>
+					<div class="mdui-list-item-content">小游戏</div>
+				</li>
+				<li class="mdui-list-item mdui-ripple" onclick="about()">
+					<i class="mdui-list-item-icon mdui-icon material-icons">face</i>
+					<div class="mdui-list-item-content">关于我们</div>
+				</li>
+			</ul>
+		</div>
+		<div class="mdui-dialog" id="announcement">
+			<div class="mdui-dialog-title">公告</div>
+			<div class="mdui-dialog-content">
+				<div id="GG"></div>
+				<hr>
+				Tip：当加载过慢时，您可以切换线路:
+				<br>
+        <div id="btn-s-5">
+				<button class="mdui-btn mdui-ripple mdui-color-theme mdui-text-color-white" onclick="line_1()">线路1</button>
+				<button class="mdui-btn mdui-ripple mdui-color-theme mdui-text-color-white" onclick="line_2()">线路2</button>
+				<button class="mdui-btn mdui-ripple mdui-color-theme mdui-text-color-white" onclick="line_3()">线路3</button>
+				<button class="mdui-btn mdui-ripple mdui-color-theme mdui-text-color-white" onclick="line_4()">线路4</button>
+				<button class="mdui-btn mdui-ripple mdui-color-theme mdui-text-color-white" onclick="line_5()">线路5</button>
+        </div>
+			</div>
+			<div class="mdui-dialog-actions">
+				<button class="mdui-btn mdui-ripple mdui-text-color-theme mdui-text-color-white" mdui-dialog-close>关闭</button>
+			</div>
+		</div>
+		<div class="mdui-dialog" id="support">
+			<div class="mdui-dialog-title">支持我们</div>
+			<div class="mdui-dialog-content">
+                如果您有能力，还请多多支持我们！
+				<br>
+				<img src="http://pro-ivan.cn/sponsor/weixin.jpg" class="support-img" width="48%" />
+				<img src="http://pro-ivan.cn/sponsor/alipay.jpg" class="support-img" width="48%" style="margin-left:2%;"/>
+			</div>
+			<div class="mdui-dialog-actions">
+				<button class="mdui-btn mdui-ripple mdui-text-color-theme mdui-text-color-white" mdui-dialog-close>关闭</button>
+			</div>
+		</div>
+		</div>
+		<div class="mdui-appbar">
+			<div class="mdui-toolbar mdui-color-theme">
+				<a href="javascript:;" mdui-drawer="{target: '#left-drawer'}" class="mdui-btn mdui-btn-icon">
+					<i class="mdui-icon material-icons">menu</i>
+				</a>
+				<a href="javascript:;" class="mdui-typo-headline">Pro-Ivan数字库-图床</a>
+				<div class="mdui-toolbar-spacer"></div>
+				<a href="javascript:;" class="mdui-btn mdui-btn-icon">
+					<i class="mdui-icon material-icons"></i>
+				</a>
+			</div>
+		</div>
+        <div id="body">
+            <h3>图床</h3>
+            <p><b>注意!目前只支持上传jpg，jpeg，png与部分gif！请不要滥用图床，本图床只供分享b站无法通过审核的图片!</b></p>
+            <center>
+            <form action="./upload_pic/upload_pic.php" method="post" enctype="multipart/form-data">
+                <input type="file" name="file" id="file">
+                <input type="submit" value="上传" onclick="Upload()">
+            </form>
+        </center>
+        <h3>关于本页面</h3>
+        <p>很简陋，但是功能都正常，请放心使用！</p>
+        <h3>已上传的图片</h3>
+        <button class="mdui-btn mdui-ripple mdui-btn-raised mdui-btn-dense mdui-color-theme" onclick="img_bed_files()">查看已上传的图片</button>
+        </div>
+        </body>
+        <footer><div id="footer"></div></footer>
+        <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
+        <script src="./new-js/index.js"></script>
+</html>

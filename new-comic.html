@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" />
+		<meta name="renderer" content="webkit" />
+		<meta name="force-rendering" content="webkit" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<link rel="stylesheet" href="./mdui/css/mdui.css" />
+		<link rel="stylesheet" href="./new-js/index.css">
+		<title>Pro-Ivan数字库-漫画</title>
+	</head>
+	<body class="mdui-drawer-body-left mdui-theme-primary-light-blue">
+		<div class="mdui-drawer" id="left-drawer">
+			<img src="./Ivan.png" style="max-width: 100%; max-height: 100%;">
+			<ul class="mdui-list">
+                <li class="mdui-list-item mdui-ripple" onclick="home()">
+					<i class="mdui-list-item-icon mdui-icon material-icons">home</i>
+					<div class="mdui-list-item-content">主页</div>
+				</li>
+				<li class="mdui-list-item mdui-ripple" mdui-dialog="{target: '#announcement'}">
+					<i class="mdui-list-item-icon mdui-icon material-icons">message</i>
+					<div class="mdui-list-item-content">公告</div>
+				</li>
+				<li class="mdui-list-item mdui-ripple" mdui-dialog="{target: '#support'}">
+					<i class="mdui-list-item-icon mdui-icon material-icons">account_balance_wallet</i>
+					<div class="mdui-list-item-content">支持我们</div>
+				</li>
+				<li class="mdui-list-item mdui-ripple" onclick="imgs()">
+					<i class="mdui-list-item-icon mdui-icon material-icons">image</i>
+					<div class="mdui-list-item-content">图库</div>
+				</li>
+				<li class="mdui-list-item mdui-ripple" onclick="comic()">
+					<i class="mdui-list-item-icon mdui-icon material-icons">book</i>
+					<div class="mdui-list-item-content">漫画</div>
+				</li>
+				<li class="mdui-list-item mdui-ripple" onclick="img_bed()">
+					<i class="mdui-list-item-icon mdui-icon material-icons">cloud_queue</i>
+					<div class="mdui-list-item-content">图床</div>
+				</li>
+				<li class="mdui-list-item mdui-ripple" onclick="little_game()">
+					<i class="mdui-list-item-icon mdui-icon material-icons">extension</i>
+					<div class="mdui-list-item-content">小游戏</div>
+				</li>
+				<li class="mdui-list-item mdui-ripple" onclick="about()">
+					<i class="mdui-list-item-icon mdui-icon material-icons">face</i>
+					<div class="mdui-list-item-content">关于我们</div>
+				</li>
+			</ul>
+		</div>
+		<div class="mdui-dialog" id="announcement">
+			<div class="mdui-dialog-title">公告</div>
+			<div class="mdui-dialog-content">
+				<div id="GG"></div>
+				<hr>
+				Tip：当加载过慢时，您可以切换线路:
+				<br>
+        <div id="btn-s-5">
+            <button class="mdui-btn mdui-ripple mdui-color-theme mdui-text-color-white" onclick="line_1()">线路1</button>
+            <button class="mdui-btn mdui-ripple mdui-color-theme mdui-text-color-white" onclick="line_2()">线路2</button>
+            <button class="mdui-btn mdui-ripple mdui-color-theme mdui-text-color-white" onclick="line_3()">线路3</button>
+            <button class="mdui-btn mdui-ripple mdui-color-theme mdui-text-color-white" onclick="line_4()">线路4</button>
+            <button class="mdui-btn mdui-ripple mdui-color-theme mdui-text-color-white" onclick="line_5()">线路5</button>
+        </div>
+			</div>
+			<div class="mdui-dialog-actions">
+				<button class="mdui-btn mdui-ripple mdui-text-color-theme mdui-text-color-white" mdui-dialog-close >关闭</button>
+			</div>
+		</div>
+		<div class="mdui-dialog" id="support">
+			<div class="mdui-dialog-title">支持我们</div>
+			<div class="mdui-dialog-content">
+                如果您有能力，还请多多支持我们！
+				<br>
+				<img src="http://pro-ivan.cn/sponsor/weixin.jpg" class="support-img" width="48%" />
+				<img src="http://pro-ivan.cn/sponsor/alipay.jpg" class="support-img" width="48%" style="margin-left:2%;"/>
+			</div>
+			<div class="mdui-dialog-actions">
+				<button class="mdui-btn mdui-ripple mdui-text-color-theme mdui-text-color-white" mdui-dialog-close >关闭</button>
+			</div>
+		</div>
+		</div>
+		<div class="mdui-appbar">
+			<div class="mdui-toolbar mdui-color-theme">
+				<a href="javascript:;" mdui-drawer="{target: '#left-drawer'}" class="mdui-btn mdui-btn-icon">
+					<i class="mdui-icon material-icons">menu</i>
+				</a>
+				<a href="javascript:;" class="mdui-typo-headline">Pro-Ivan数字库-漫画</a>
+				<div class="mdui-toolbar-spacer"></div>
+				<a href="javascript:;" class="mdui-btn mdui-btn-icon">
+					<i class="mdui-icon material-icons"></i>
+				</a>
+			</div>
+		</div>
+        <div id="body">
+            <div id="tips">
+                <h3>提示</h3>
+                <p>由于网页渲染逻辑问题，会导致部分卡片从右边渲染，这属于正常现象，请谅解</p>
+                <h3>注意</h3>
+                <p>此页面使用电脑浏览可能体验不佳，建议使用平板设备访问该页面</p>
+            </div>
+            <div class="row">
+                <div class="mdui-col-sm-6">
+                    <div id="card-one">
+                        <div class="mdui-card">
+                            <div class="mdui-card-media">
+                                <img src="http://pro-ivan.cn/manga/Kkltsit_hypnosis_saluky/1.webp"/>
+                                <div class="mdui-card-media-covered">
+                                  <div class="mdui-card-primary">
+                                    <div class="mdui-card-primary-title">凯尔希的催眠时刻</div>
+                                    <div class="mdui-card-primary-subtitle">Saluky</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="mdui-card-actions">
+                                <button class="mdui-btn mdui-ripple mdui-float-right" onclick="Kkltsit_hypnosis_saluky()">阅读</button>
+                              </div>
+                        </div>
+                    </div>
+                    <!--111-->
+                    <div id="card-one">
+                        <div class="mdui-card">
+                            <div class="mdui-card-media">
+                                <img src="http://pro-ivan.cn/manga/connect_jp_komota/CP00.webp"/>
+                                <div class="mdui-card-media-covered">
+                                  <div class="mdui-card-primary">
+                                    <div class="mdui-card-primary-title">Connect 日文原版</div>
+                                    <div class="mdui-card-primary-subtitle">KOMOTA</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="mdui-card-actions">
+                                <button class="mdui-btn mdui-ripple mdui-float-right" onclick="connect_jp_komota()">阅读</button>
+                              </div>
+                        </div>
+                    </div>
+                    <!--111-->
+                </div>
+            </div>
+            <div class="mdui-col-sm-6">
+                <div id="card-one">
+                    <div class="mdui-card">
+                        <div class="mdui-card-media">
+                            <img src="http://pro-ivan.cn/manga/connect_cn_komota/CP00.webp"/>
+                            <div class="mdui-card-media-covered">
+                              <div class="mdui-card-primary">
+                                <div class="mdui-card-primary-title">Connect 中国特供</div>
+                                <div class="mdui-card-primary-subtitle">KOMOTA</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="mdui-card-actions">
+                            <button class="mdui-btn mdui-ripple mdui-float-right" onclick="connect_cn_komota()">阅读</button>
+                          </div>
+                    </div>
+                </div>
+                <!--111-->
+                <div id="card-one">
+                    <div class="mdui-card">
+                        <div class="mdui-card-media">
+                            <img src="http://pro-ivan.cn/manga/Fischl_saluky/00.webp"/>
+                            <div class="mdui-card-media-covered">
+                              <div class="mdui-card-primary">
+                                <div class="mdui-card-primary-title">直面本心的堕落王女</div>
+                                <div class="mdui-card-primary-subtitle">Saluky</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="mdui-card-actions">
+                            <button class="mdui-btn mdui-ripple mdui-float-right" onclick="Fischl_saluky()">阅读</button>
+                          </div>
+                    </div>
+                </div>
+                <!--111-->
+                <div class="mdui-card">
+                    <div class="mdui-card-media">
+                        <img src="http://pro-ivan.cn/manga/connect2_komota/EX.webp"/>
+                        <div class="mdui-card-media-covered">
+                          <div class="mdui-card-primary">
+                            <div class="mdui-card-primary-title">Connect·少女和触手编织爱情·后篇(官方简中)</div>
+                            <div class="mdui-card-primary-subtitle">KOMOTA</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mdui-card-actions">
+                        <button class="mdui-btn mdui-ripple mdui-float-right" onclick="connect2_komota()">阅读</button>
+                      </div>
+                </div>
+            </div>
+                <!--111-->
+        </div>
+    </div>
+</div>
+   
+        </body>
+        <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
+        <script src="./new-js/index.js"></script>
+</html>
